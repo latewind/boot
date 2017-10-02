@@ -34,7 +34,7 @@
 	<!-- 用户是否有权限 -->
 	<select id="selectRoleFunctionCount" resultType="java.lang.Integer">
 		SELECT count(*)
-		FROM ssm.sys_role_function_t t1 join (select * from
+		FROM sys_role_function_t t1 join (select * from
 		sys_function_t
 		where FUNCTION_URL =#{actionUrl}) as t2
 		on t1.function_id
@@ -42,7 +42,7 @@
 	</select>
 	<select id="selectRoleFuncByRole" resultMap="BaseResultMap">
 
-		SELECT sft.* FROM ssm.sys_function_t sft join 
+		SELECT sft.* FROM sys_function_t sft join 
 		(select srft.* from sys_role_function_t srft join sys_role_t sr
 		on srft.ROLE_ID = sr.ROLE_ID and
 		<choose>
