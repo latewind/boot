@@ -58,7 +58,7 @@
 			<mvc:mapping path="/front/subCategory/*" />
 			<mvc:mapping path="/front/thirdCategory/*" />
 			<mvc:mapping path="/front/product/*" />
-			<bean class="com.latewind.intercepter.common.WebConfigIntercepter"></bean>
+			<bean class="com.latewind.intercepter.WebConfigIntercepter"></bean>
 		</mvc:interceptor>
 
 		<!-- 前台登录拦截器 -->
@@ -68,7 +68,7 @@
 			<mvc:mapping path="/front/ajax/**/*" />
 			<mvc:mapping path="/front/personal/*" />
 			<mvc:exclude-mapping path="/front/ajax/thirdCategory/*" />
-			<bean class="com.latewind.intercepter.common.FrontLoginIntercepter"></bean>
+			<bean class="com.latewind.intercepter.FrontLoginIntercepter"></bean>
 		</mvc:interceptor>
 
 		<!-- 后台拦截器 -->
@@ -76,7 +76,7 @@
 			<mvc:mapping path="/admin/**/*" />
 			<mvc:exclude-mapping path="/admin/login.html" />
 			<mvc:exclude-mapping path="/admin/user/loginAction" />
-			<bean class="com.latewind.intercepter.common.AdminIntercepter"></bean>
+			<bean class="com.latewind.intercepter.AdminIntercepter"></bean>
 		</mvc:interceptor>
 
 
