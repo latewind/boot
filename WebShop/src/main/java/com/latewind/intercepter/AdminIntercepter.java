@@ -1,4 +1,4 @@
-package com.latewind.intercepter.common;
+package com.latewind.intercepter;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;

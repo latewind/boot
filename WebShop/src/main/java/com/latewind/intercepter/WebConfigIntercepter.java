@@ -1,4 +1,4 @@
-package com.latewind.intercepter.common;
+package com.latewind.intercepter;
 
 import java.util.HashMap;
 import java.util.List;
