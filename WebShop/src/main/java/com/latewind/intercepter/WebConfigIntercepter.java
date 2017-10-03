@@ -35,6 +35,7 @@ public class WebConfigIntercepter extends HandlerInterceptorAdapter {
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
+		logger.info(modelAndView.getViewName());
 				super.postHandle(request, response, handler, modelAndView);
 	}
 
@@ -50,7 +51,7 @@ public class WebConfigIntercepter extends HandlerInterceptorAdapter {
 		request.setAttribute("navTabs", tabs);
 //		Request.CurrentExecutionFilePath
 		String url=request.getRequestURI();
-		logger.info(url+"网站配置拦截---webConfig 客户IP Address"+NetUtil.getRemoteHost(request));
+		logger.info(url+" IP Address"+NetUtil.getRemoteHost(request));
 		
 				return super.preHandle(request, response, handler);
 	}
