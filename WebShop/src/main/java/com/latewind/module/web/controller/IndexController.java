@@ -130,12 +130,8 @@ public class IndexController {
 			List<Map<String, List>> list2=new ArrayList<Map<String, List>>();	
 			list2.add(leftPart2);
 			list2.add(rightPart2);	
-			System.out.println("test...............................................hot deploy");
 			part.put("精彩推荐", list2);
-			
-		
 		model.addAttribute("part",part);
-		
 		//webapp/static/productImgs/1/1.jpg	
 		return "front/index/Index";
 	}
