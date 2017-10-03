@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.latewind.module.product.dao.ProductInfoMapper">
-	<resultMap id="BaseResultMap" type="com.latewind.module.product.entity.ProductInfo">
+	<resultMap id="BaseResultMap" type="ProductInfo">
 		<id column="prt_id" property="prtId" jdbcType="INTEGER" />
 		<result column="prt_name" property="prtName" jdbcType="VARCHAR" />
 		<result column="describ" property="describ" jdbcType="VARCHAR" />
@@ -21,7 +21,7 @@
 		</association>
 	</resultMap>
 
-	<resultMap id="ColectResultMap" type="com.latewind.module.product.entity.ProductInfo">
+	<resultMap id="ColectResultMap" type="ProductInfo">
 		<id column="prt_id" property="prtId" jdbcType="INTEGER" />
 		<result column="prt_name" property="prtName" jdbcType="VARCHAR" />
 		<result column="describ" property="describ" jdbcType="VARCHAR" />
@@ -43,11 +43,11 @@
 	</resultMap>
 
 
-	<resultMap id="ResultMapWithBLOBs" type="com.latewind.module.product.entity.ProductInfo"
+	<resultMap id="ResultMapWithBLOBs" type="ProductInfo"
 		extends="BaseResultMap">
 		<result column="intro" property="intro" jdbcType="LONGVARCHAR" />
 	</resultMap>
-	<resultMap id="CollectResultMapWithBLOBs" type="com.latewind.module.product.entity.ProductInfo"
+	<resultMap id="CollectResultMapWithBLOBs" type="ProductInfo"
 		extends="ColectResultMap">
 		<result column="intro" property="intro" jdbcType="LONGVARCHAR" />
 	</resultMap>
@@ -190,7 +190,7 @@
 		product_t
 		where prt_id = #{prtId,jdbcType=INTEGER}
 	</delete>
-	<insert id="insert" parameterType="com.latewind.module.product.entity.ProductInfo">
+	<insert id="insert" parameterType="ProductInfo">
 		insert into product_t (prt_id,
 		prt_name, describ,
 		third_id, price, num, sell_count,
@@ -207,7 +207,7 @@
 		#{createTime,jdbcType=DATE}, #{offShelf,jdbcType=INTEGER},
 		#{primImgId,jdbcType=INTEGER}, #{intro,jdbcType=LONGVARCHAR})
 	</insert>
-	<insert id="insertSelective" parameterType="com.latewind.module.product.entity.ProductInfo"
+	<insert id="insertSelective" parameterType="ProductInfo"
 		useGeneratedKeys="true" keyProperty="prtId">
 		insert into product_t
 		<trim prefix="(" suffix=")" suffixOverrides=",">
@@ -287,7 +287,7 @@
 			</if>
 		</trim>
 	</insert>
-	<update id="updateByPrimaryKeySelective" parameterType="com.latewind.module.product.entity.ProductInfo">
+	<update id="updateByPrimaryKeySelective" parameterType="ProductInfo">
 		update product_t
 		<set>
 			<if test="prtName != null">
@@ -326,7 +326,7 @@
 		</set>
 		where prt_id = #{prtId,jdbcType=INTEGER}
 	</update>
-	<update id="updateByPrimaryKeyWithBLOBs" parameterType="com.latewind.module.product.entity.ProductInfo">
+	<update id="updateByPrimaryKeyWithBLOBs" parameterType="ProductInfo">
 		update
 		product_t
 		set prt_name = #{prtName,jdbcType=VARCHAR},
@@ -346,7 +346,7 @@
 		#{intro,jdbcType=LONGVARCHAR}
 		where prt_id = #{prtId,jdbcType=INTEGER}
 	</update>
-	<update id="updateByPrimaryKey" parameterType="com.latewind.module.product.entity.ProductInfo">
+	<update id="updateByPrimaryKey" parameterType="ProductInfo">
 		update product_t
 		set prt_name = #{prtName,jdbcType=VARCHAR},
 		describ =

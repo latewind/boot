@@ -54,6 +54,8 @@
 		<!-- 自动扫描mapping.xml文件 -->
 		<property name="mapperLocations"
 			value="classpath:com/latewind/mapping/**/*Mapper.xml"></property>
+		<!-- 别名 -->
+		<property name="typeAliasesPackage" value="com.latewind.module" /> 
 	</bean>
 
 	<!-- DAO接口所在包名，Spring会自动查找其下的类 -->
