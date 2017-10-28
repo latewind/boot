@@ -68,7 +68,7 @@ public class OrderController {
 	}
 	@ResponseBody
 	@RequestMapping(value="/front/order/orderConfirm",method = RequestMethod.POST, produces = "text/plain;charset=UTF-8")
-	public String confirmOrder(@RequestBody OrderPageInfo json,HttpServletRequest  request){
+	public String confirmOrder(@RequestBody  OrderPageInfo json,HttpServletRequest  request){
 		LoginInfo loginInfo=ValidateLogin.getLoginInfo(request);
 		Integer userId=	loginInfo.getUserId();
 		Integer orderId=orderService.addOrder(json,userId);

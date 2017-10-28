@@ -114,7 +114,7 @@ public class ProductServiceImpl implements IProductService {
 
 	@Override
 	public ProductInfo getProductAllInfoById(Integer id) {
-		
+		logger.info(productImageDAO.getClass());
 		System.out.println(productImageDAO.selectByPrimaryKey(1).getImageName()+"get All Info By Product ID ="+id);
 		
 		logger.info(productImageDAO.selectByPrimaryKey(1).getImageName()+"get All Info By Product ID ="+id);
