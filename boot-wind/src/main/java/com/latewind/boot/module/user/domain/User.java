@@ -1,4 +1,4 @@
-package com.latewind.boot.module.user.entity;
+package com.latewind.boot.module.user.domain;
 
 import java.io.Serializable;
 
