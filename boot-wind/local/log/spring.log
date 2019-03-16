@@ -2744,3 +2744,25 @@ Verify the connector's configuration, identify and stop any process that's liste
 2018-05-29 06:47:14.287  INFO 13532 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
 2018-05-29 06:47:14.369  INFO 13532 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
 2018-05-29 06:47:14.377  INFO 13532 --- [restartedMain] com.latewind.boot.BootWindApplication    : Started BootWindApplication in 5.696 seconds (JVM running for 6.231)
+2019-03-16 22:08:14.524  INFO 18656 --- [main] c.l.b.m.s.c.HelloControllerTest          : Starting HelloControllerTest on Mars with PID 18656 (started by hasee in D:\StudySpace\boot\boot-wind)
+2019-03-16 22:08:14.526  INFO 18656 --- [main] c.l.b.m.s.c.HelloControllerTest          : No active profile set, falling back to default profiles: default
+2019-03-16 22:08:14.556  INFO 18656 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@24fcf36f: startup date [Sat Mar 16 22:08:14 CST 2019]; root of context hierarchy
+2019-03-16 22:08:16.156  INFO 18656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d5058c3a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-16 22:08:17.368  INFO 18656 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-03-16 22:08:19.561  INFO 18656 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-16 22:08:20.055  INFO 18656 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2019-03-16 22:08:20.056  INFO 18656 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2019-03-16 22:08:20.247  INFO 18656 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.latewind.boot.module.system.controller.HelloController.index()
+2019-03-16 22:08:20.254  INFO 18656 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-03-16 22:08:20.255  INFO 18656 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-03-16 22:08:20.306  INFO 18656 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-16 22:08:20.306  INFO 18656 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-16 22:08:20.326  INFO 18656 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-16 22:08:20.595  INFO 18656 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@24fcf36f: startup date [Sat Mar 16 22:08:14 CST 2019]; root of context hierarchy
+2019-03-16 22:08:20.725  INFO 18656 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 669 ms
+2019-03-16 22:08:20.998  INFO 18656 --- [main] c.l.b.m.s.c.HelloControllerTest          : Started HelloControllerTest in 6.866 seconds (JVM running for 8.044)
+2019-03-16 22:08:21.076  INFO 18656 --- [main] uration$$EnhancerBySpringCGLIB$$f6075f24 : this is MyFilter,url :/hello
+2019-03-16 22:08:21.094  INFO 18656 --- [main] c.l.b.m.s.controller.HelloController     : false
+2019-03-16 22:08:21.314  INFO 18656 --- [main] c.l.b.m.s.controller.HelloController     : Boot,0
+2019-03-16 22:08:21.338  INFO 18656 --- [Thread-5] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@24fcf36f: startup date [Sat Mar 16 22:08:14 CST 2019]; root of context hierarchy
+2019-03-16 22:08:21.341  INFO 18656 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
